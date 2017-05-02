@@ -1,11 +1,11 @@
 # Ghost storage adapter S3
 
-An AWS S3 storage adapter for Ghost 0.10+
+An AWS S3 storage adapter for Ghost 1.0+
 
 ## Installation
 
 ```
-npm install ghost-storage-adapter-s3
+yarn add git+ssh://git@github.com:kametventures/ghost-storage-adapter-s3
 mkdir -p ./content/storage
 cp -r ./node_modules/ghost-storage-adapter-s3 ./content/storage/s3
 ```
@@ -14,7 +14,9 @@ cp -r ./node_modules/ghost-storage-adapter-s3 ./content/storage/s3
 
 ```
 storage: {
-  active: 's3',
+  "active": {
+    "images": "s3"
+  },
   s3: {
     accessKeyId: 'YOUR_ACCESS_KEY_ID',
     assetHost: 'YOUR_OPTIONAL_CDN_URL',
@@ -28,7 +30,7 @@ storage: {
 
 ## Support
 
-This library works with Ghost 0.10 and 0.11.
+This library works with Ghost 1.0
 
 ## License
 
