@@ -109,6 +109,12 @@ class Store extends BaseStore {
             .pipe(res)
     }
   }
+
+  read() {
+    /*
+     * Dummy function as ghost needs it
+     */
+  }
 }
 
 export default Store
